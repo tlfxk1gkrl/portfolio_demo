@@ -1,0 +1,362 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::-webkit-scrollbar {
+  width: 5px; /*스크롤바의 너비*/
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #bfbfbf; /*스크롤바의 색상*/
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent; /*스크롤바 트랙 색상*/
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.profile-box {
+  margin-top: 10vh;
+  height: 70vh;
+  min-height: 500px;
+  width: 70vw;
+  min-width: 676px;
+  background-color: #fff;
+  border-radius: 20px;
+
+  -webkit-box-shadow: 0px 3px 5px 4px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 3px 5px 4px rgba(0, 0, 0, 0.41);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: hidden;
+}
+.profile-box .title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.profile-box hr {
+  position: relative;
+  top: -10px;
+  border: 1px solid #000;
+  width: 50%;
+}
+.profile-box .detail {
+  flex: 1;
+  width: 80%;
+
+  display: flex;
+}
+.profile-box .detail .picture-name {
+  flex: 1;
+  height: 90%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.profile-box .detail .picture-name img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+.profile-box .detail .picture-name p {
+  font-size: 2em;
+  font-weight: bold;
+}
+.profile-box .detail .pr-space {
+  position: relative;
+  margin-left: 20px;
+  flex: 2;
+  height: 90%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  font-weight: bold;
+}
+.profile-box .detail .pr-space h3 {
+  margin-bottom: 5%;
+}
+ul.mylist,
+ol.mylist {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  font-weight: bold;
+}
+ul.mylist li:before,
+ol.mylist li:before {
+  content: "|";
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0px 5px 6px 0px;
+}
+.profile-box .detail .pr-space .email-phone {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 5%;
+}
+.profile-box .detail .pr-space .email-phone .row-item {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.project-box {
+  margin-top: 10vh;
+  height: 70vh;
+  min-height: 500px;
+  width: 70vw;
+  min-width: 676px;
+  background-color: #fff;
+  border-radius: 20px;
+
+  -webkit-box-shadow: 0px 3px 5px 4px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 3px 5px 4px rgba(0, 0, 0, 0.41);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: hidden;
+}
+.project-box .title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.project-box hr {
+  position: relative;
+  top: -10px;
+  border: 1px solid #000;
+  width: 50%;
+}
+.project-box .item-title {
+  display: flex;
+  width: 80%;
+}
+.project-box .item-title .project-kind {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
+  padding-bottom: 2px;
+  border-radius: 5px;
+}
+.project-box .item-title p {
+  font-size: 1em;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+}
+.project-box .items {
+  margin-top: 10px;
+  width: 100%;
+  height: 50%;
+  display: flex;
+}
+.project-box .items .item:nth-child(odd) {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  background-color: transparent;
+  border: hidden;
+  transition: 0.4s;
+  transform: perspective(1px) translateZ(0);
+}
+.project-box .items .item:nth-child(odd) .svg-icon {
+  transform: scale(1.8);
+}
+@keyframes zoomAndOut {
+  from {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(2, 2);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+.project-box .items .item:nth-child(odd):hover {
+  color: #3142da;
+
+  animation-duration: 0.5s;
+  animation-name: zoomAndOut;
+}
+.project-box .items .item:nth-child(2) {
+  flex: 8;
+  border-radius: 10px;
+
+  -webkit-box-shadow: 0px 3px 5px 4px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 3px 5px 4px rgba(0, 0, 0, 0.41);
+}
+.project-box .item-explain {
+  flex: 1;
+  display: flex;
+  width: auto;
+  max-width: 80%;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.project-list {
+  height: 40vh;
+  width: 70vw;
+  min-width: 676px;
+
+  display: flex;
+  justify-content: space-between;
+}
+.project-list .item {
+  -webkit-box-shadow: 0px 3px 5px 4px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 3px 5px 4px rgba(0, 0, 0, 0.41);
+  border-radius: 20px;
+  width: 25%;
+  height: 100%;
+}
+.project-list .item .top {
+  background-color: #fff;
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+.project-list .item .top .project-kind {
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  align-items: center;
+  margin: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 2px;
+  border-radius: 5px;
+  font-size: 0.8em;
+}
+.project-list .item .top .project-title {
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-left: 20px;
+}
+.project-list .item .top .project-explain {
+  font-size: 0.8em;
+  margin: 10px;
+}
+.github-url-box {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 3px 5px 4px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 3px 5px 4px rgba(0, 0, 0, 0.41);
+  border-radius: 20px;
+
+  height: 20vh;
+  min-height: 150px;
+  width: 70vw;
+  min-width: 676px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.github-url-box img {
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 100%;
+  width: 15%;
+}
+.github-url-box .github-explain {
+  flex: 1;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.github-url-box .github-explain h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+.github-url-box .github-explain p {
+  flex: 1;
+  font-size: 0.8em;
+}
+.github-url-box .github-explain button {
+  margin-top: 10px;
+  background-color: #000;
+  border: hidden;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 3px;
+}
+.github-url-box .github-explain button a {
+  color: #fff;
+}
+.btn-to-top {
+  width: 30vw;
+  min-width: 210px;
+  height: 50px;
+  background-color: #fff;
+
+  -webkit-box-shadow: 0px 3px 5px 4px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 3px 5px 4px rgba(0, 0, 0, 0.41);
+  border: hidden;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.btn-to-top .svg-icon {
+  transform: scale(1.8);
+  position: relative;
+  top: 3px;
+}
+.btn-to-top:hover {
+  color: #3142da;
+
+  animation-duration: 0.5s;
+  animation-name: zoomAndOut;
+}
+@keyframes zoomAndOut {
+  from {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+.bottom-copyright {
+  height: 80px;
+  width: 100%;
+  background-color: #fff;
+}
